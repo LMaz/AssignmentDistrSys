@@ -59,7 +59,7 @@ public class Client implements Runnable{
 	            	
 	            	if(!answer.equalsIgnoreCase("yes"))
 	            		stop = true;
-	            		in1.close();
+	            		
 	            	}
 	            	catch(Exception e){
 	            		System.out.println(e);

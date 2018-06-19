@@ -57,9 +57,10 @@ public class Client implements Runnable{
 	            	if(in1.hasNextLine())
 	            		answer = in1.nextLine();
 	            	
-	            	if(!answer.equalsIgnoreCase("yes"))
+	            	if(!answer.equalsIgnoreCase("yes")){
+				System.out.println(report);
 	            		stop = true;
-	           
+			}
 	            	}
 	            	catch(Exception e){
 	            		System.out.println(e);

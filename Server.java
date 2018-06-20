@@ -26,8 +26,9 @@ public class Server {
     	        
     	        int i = 0;
     	        int previousHash = 0;
-    	        do {
-    	        	MedicalReport rp = (MedicalReport)in.readObject();
+    	        while(i!=20){
+    	        	MedicalReport rp;
+			if((rp = (MedicalReport)in.readObject())==null) break;
     	        	Block block = new Block(rp,previousHash);
     	        	blockChain.add(block);
     	        	System.out.println("Block " + blockChain.size() + " added to blockchain");
@@ -36,7 +37,7 @@ public class Server {
 			System.out.println(blockChain);
     	        	
     	        	i++;
-    	        } while (i != 20);
+    	        }
     	        
     	        try{
 		            ss.close();

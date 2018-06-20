@@ -33,6 +33,7 @@ public class Server {
     	        	System.out.println("Block " + blockChain.size() + " added to blockchain");
     	        	System.out.println(blockChain.get(i));
     	        	previousHash = block.getBlockHash();
+			System.out.println(blockChain);
     	        	
     	        	i++;
     	        } while (i != 20);

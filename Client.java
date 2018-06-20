@@ -69,6 +69,7 @@ public class Client implements Runnable{
 	            }
 	            
 	            try{
+		    p.writeObject(null); 
 	            s.close();
 	            }
 	            catch(Exception e){

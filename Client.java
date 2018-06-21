@@ -61,6 +61,7 @@ public class Client implements Runnable{
 	            	
 	            	if(!answer.equalsIgnoreCase("yes")){
                                 System.out.println(report);
+				stop=true;
                         }
                         if(i==4) System.out.println("Sorry, block full, exiting the program");
                          

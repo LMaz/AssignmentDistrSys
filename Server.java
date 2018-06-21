@@ -26,7 +26,7 @@ public class Server {
     	        
     	        int i = 0;
     	        int previousHash = 0;
-    	        while(i!=20){
+    	        while(i!=6){
     	        	MedicalReport rp;
 			if((rp = (MedicalReport)in.readObject())==null) break;
     	        	Block block = new Block(rp,previousHash);

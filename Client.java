@@ -45,7 +45,7 @@ public class Client implements Runnable{
 	          //manda informe al servidor serializado y espera respuesta
 	            boolean stop = false;
                     int i=0;
-	            while(i!=5){
+	            while(i!=5 && !stop){
 	            	try{
                             
 	            	MedicalReport report = createReport();
@@ -61,7 +61,7 @@ public class Client implements Runnable{
 	            	
 	            	if(!answer.equalsIgnoreCase("yes")){
                                 System.out.println(report);
-				stop=true;
+                                stop=true;
                         }
                         if(i==4) System.out.println("Sorry, block full, exiting the program");
                          
